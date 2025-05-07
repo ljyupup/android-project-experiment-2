@@ -11,7 +11,7 @@
   - Language: `Kotlin`
   - Minimum SDK: `API 34: Android 14.0 `
 
-![image-20250423094327835](readmeImg/pic1.png)
+![image-20250423094327835](readmeimg/pic1.png)
 
 ### 2.运行app
 
@@ -19,7 +19,7 @@
 
 - 等待构建并启动应用，屏幕应显示 “Hello, World!”
 
-  ![image-20250423094833582](pic2.png)
+  ![image-20250423094833582](readmeimg/pic2.png)
 
 ## **实验2：**实践Compose布局
 
@@ -40,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 ```
 
-![image-20250423095530673](readmeImg/pic3.png)
+![image-20250423095530673](readmeimg/pic3.png)
 
 ### 2.修饰符
 
@@ -63,7 +63,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 ```
 
-![image-20250423100050044](readmeImg/pic4.png)
+![image-20250423100050044](readmeimg/pic4.png)
 
 ### 3.重复使用可组合项
 
@@ -185,7 +185,7 @@ fun MyApp(
 
 效果如下：
 
-![image-20250423102709344](readmeImg/pic5.png)
+![image-20250423102709344](readmeimg/pic5.png)
 
 当前尚未设置可组合项的尺寸，也未对可组合项的大小添加任何限制，因此每一行仅占用可能的最小空间，预览时的效果也是如此。更改预览效果，以模拟小屏幕手机的常见宽度 320dp。按如下所示向 @Preview 注解添加 widthDp 参数：
 
@@ -200,7 +200,7 @@ fun GreetingPreview() {
 
 ```
 
-![image-20250423102908025](readmeImg/pic6.png)
+![image-20250423102908025](readmeimg/pic6.png)
 
 接下来为修饰符（modifier）添加更多的属性，来查看显示效果。使用 fillMaxWidth 和 padding 修饰符复制以下布局。注意更改工程中的代码，使用以下代码修改Compose函数：
 
@@ -234,7 +234,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 ```
 
-![image-20250423103028513](readmeImg/pic7.png)
+![image-20250423103028513](readmeimg/pic7.png)
 
 ### 5.添加按钮
 
@@ -267,7 +267,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 ```
 
-![image-20250423103254121](readmeImg/pic8.png)
+![image-20250423103254121](readmeimg/pic8.png)
 
 ### 6.Compose中的状态（State）
 
@@ -304,6 +304,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 ```
 
-![image-20250423103503475](readmeImg/pic9.png)
+![image-20250423103503475](readmeimg/pic9.png)
 
 这段代码实现了一个可展开的问候组件，点击“Show more”按钮后，卡片底部会增加额外间距以模拟展开效果，按钮文字变为“Show less”；再次点击可收起。这通过 `remember` 和 `mutableStateOf` 实现状态管理，结合条件 padding 动态调整布局，展现了 Jetpack Compose 中响应式 UI 和交互逻辑的简洁实现方式。
